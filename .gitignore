@@ -1,0 +1,6 @@
+.DS_Store
+.bundle
+.history
+.vscode
+Thumbs.db
+node_modules
