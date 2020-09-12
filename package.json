@@ -1,0 +1,20 @@
+{
+  "name": "duplicate-checker",
+  "version": "0.1.0",
+  "description": "CSVとデコモジ本体の全体リストを突合して重複があるかないかをチェックするスクリプト。",
+  "main": "index.js",
+  "scripts": {
+    "check": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/decomoji/duplicate-checker.git"
+  },
+  "keywords": [],
+  "author": "oti",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/decomoji/duplicate-checker/issues"
+  },
+  "homepage": "https://github.com/decomoji/duplicate-checker#readme"
+}
