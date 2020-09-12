@@ -20,6 +20,7 @@
   "devDependencies": {
     "commitizen": "^4.2.1",
     "cz-customizable": "^6.3.0",
+    "decomoji": "github:decomoji/decomoji",
     "husky": "^4.3.0",
     "prettier": "^2.1.1",
     "pretty-quick": "^3.0.2"
