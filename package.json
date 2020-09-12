@@ -16,5 +16,26 @@
   "bugs": {
     "url": "https://github.com/decomoji/duplicate-checker/issues"
   },
-  "homepage": "https://github.com/decomoji/duplicate-checker#readme"
+  "homepage": "https://github.com/decomoji/duplicate-checker#readme",
+  "devDependencies": {
+    "commitizen": "^4.2.1",
+    "cz-customizable": "^6.3.0",
+    "husky": "^4.3.0",
+    "prettier": "^2.1.1",
+    "pretty-quick": "^3.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./.cz-config.js"
+    }
+  }
 }
