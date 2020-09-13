@@ -46,4 +46,4 @@ const report = {
 };
 
 // REPORT.json を書き出す
-writeJsonFileSync(report, `./REPORT.json`);
+writeJsonFileSync(report, "./REPORT.json", "silent");
