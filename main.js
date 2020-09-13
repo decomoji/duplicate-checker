@@ -49,5 +49,13 @@ const report = {
   duplicates,
 };
 
+const quick_report =
+  amount > 0
+    ? `[FAIL🛑]: ${amount} items duplicated! See also REPORT.json`
+    : "[PASS🎉]: No duplicate";
+
 // REPORT.json を書き出す
 writeJsonFileSync(report, "./REPORT.json", "silent");
+
+// クリックレポートを出力する
+console.log(quick_report);
