@@ -1,5 +1,6 @@
 const fs = require("fs");
 const isStringOfNotEmpty = require("./utilities/isStringOfNotEmpty");
+const writeJsonFileSync = require("./utilities/writeJsonFileSync");
 
 const default_path = {
   csv: "./src/candidate.csv",
@@ -36,3 +37,13 @@ const candidates = labelled.filter((v) => !v.ignore);
 const duplicates = candidates.filter((c) => {
   return exists.findIndex((e) => e.name === c.yomi) > -1;
 });
+
+// レポートオブジェクト
+const report = {
+  csv: CSV_PATH,
+  result: duplicates.length > 0 ? "FAIL" : "PASS",
+  duplicates,
+};
+
+// REPORT.json を書き出す
+writeJsonFileSync(report, `./REPORT.json`);
