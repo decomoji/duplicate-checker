@@ -38,10 +38,14 @@ const duplicates = candidates.filter((c) => {
   return exists.findIndex((e) => e.name === c.yomi) > -1;
 });
 
+const amount = duplicates.length;
+const result = amount > 0 ? "FAIL" : "PASS";
+
 // レポートオブジェクト
 const report = {
+  result,
+  amount,
   csv: CSV_PATH,
-  result: duplicates.length > 0 ? "FAIL" : "PASS",
   duplicates,
 };
 
