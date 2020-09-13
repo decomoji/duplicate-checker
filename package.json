@@ -1,10 +1,10 @@
 {
   "name": "duplicate-checker",
   "version": "0.1.0",
-  "description": "CSVとデコモジ本体の全体リストを突合して重複があるかないかをチェックするスクリプト。",
+  "description": "デコモジDBからダウンロードした CSV とデコモジ本体の全体リストを突合し、重複があるかないかをチェックするスクリプト。",
   "main": "index.js",
   "scripts": {
-    "check": "node index.js"
+    "update:decomoji": "rm -rf node_modules/decomoji && npm i -d decomoji/decomoji"
   },
   "repository": {
     "type": "git",
